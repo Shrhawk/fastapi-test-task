@@ -1,0 +1,6 @@
+EMAIL_EXISTS = "email already exists"
+USER_CREATED = "User created successfully"
+WRONG_CREDENTIALS = "Incorrect email or password"
+NO_DATA_FOUND = "No data found"
+DATA_SAVED_SUCCESSFULLY = "Data Saved Successfully"
+PAYLOAD_SIZE_EXCEEDED = "Payload size exceeds 1 MB"

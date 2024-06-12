@@ -1,0 +1,25 @@
+version: "3.7"
+
+services:
+  # FastAPI application service
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+    depends_on:
+      - mysqldb
+    env_file:
+      - .env
+
+  # MySQL database service
+  mysqldb:
+    container_name: mysqldb
+    hostname: mysqldb
+    image: mysql:latest
+    environment:
+      MYSQL_DATABASE: test_task
+      MYSQL_USER: user
+      MYSQL_PASSWORD: root1234
+      MYSQL_ROOT_PASSWORD: root1234
+    ports:
+      - "3306:3306"
